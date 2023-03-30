@@ -2,10 +2,10 @@
 <span align="center">
 
 <p>
-<img width=150px src="https://www.i4sea.com/_next/image?url=%2Flogo.png&w=128&q=75">
+<img width=128px src="https://www.i4sea.com/_next/image?url=%2Flogo.png&w=128&q=75">
 </p>
 
-<h2>Climate is changing and i4sea helps you manage it</h2>
+<h3>Climate is changing and i4sea helps you manage it</h3>
 
 <p>
 
