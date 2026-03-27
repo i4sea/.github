@@ -1,0 +1,96 @@
+name: Strategic Backlog
+description: Demanda importante para o backlog estratégico (não implementar no curto prazo)
+title: "[Backlog] "
+labels: ["strategic-backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para capturar demandas importantes que **não serão implementadas no curto prazo**.
+        Preencha com o máximo de contexto para facilitar o grooming quinzenal.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema / Contexto
+      description: O que motivou essa demanda? Qual dor ou oportunidade ela endereça?
+      placeholder: "Ex: Usuários relatam que o carregamento do dashboard demora >5s em redes lentas..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução Proposta
+      description: O que deve ser feito? Qual a abordagem técnica ou de produto?
+      placeholder: "Ex: Implementar lazy loading dos componentes do dashboard e cache no lado do cliente..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto no Negócio
+      description: Por que isso importa? Qual o efeito em usuários, receita, ou operação?
+      placeholder: "Ex: Afeta ~30% dos usuários mobile. Reduzir o churn nesse segmento..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Tipo
+      options:
+        - Feature
+        - Tech Debt
+        - Performance
+        - Security
+        - UX
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Impacto
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Esforço Estimado
+      options:
+        - S
+        - M
+        - L
+        - XL
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Notas Técnicas
+      description: Decisões de arquitetura, componentes afetados, dependências, riscos técnicos.
+      placeholder: "Ex: Impacta i4cast-frontend e i4sea-chronos-api. Precisa de feature flag..."
+
+  - type: textarea
+    id: why-not-now
+    attributes:
+      label: Por que não agora?
+      description: Qual o bloqueio ou razão para não implementar no curto prazo?
+      placeholder: "Ex: Aguardando decisão do produto sobre redesign do dashboard / Capacidade do time ocupada com X..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências / Pré-requisitos
+      description: Há outras issues, decisões ou migrações que precisam acontecer antes?
+      placeholder: "Ex: Depende de #123 (migração de banco) estar concluída..."

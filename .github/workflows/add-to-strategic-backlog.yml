@@ -1,0 +1,16 @@
+name: Add to Strategic Backlog
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  add-to-project:
+    name: Add issue to Strategic Backlog project
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'strategic-backlog'
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/i4sea/projects/5
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
